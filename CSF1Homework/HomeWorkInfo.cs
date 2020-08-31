@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CSF1Homework
 {
-    class Program
+    class HomeWorkInfo
     {
         static void Main(string[] args)
         {
@@ -35,21 +35,52 @@ namespace CSF1Homework
         Add a feature for the user to make a balance request that will display their current balance (without needing to make a deposit or withdrawal). 
          */
 
-            int atm = 100000, deposit, withdrawal, balance, pin1, pin2, userAccount, selection;
+
+            int atm = 100000, deposit, userTry, withdrawal, balance, pin1, pin2, pin3, userAccount, selection, count = 0;
+
+
             string userName = "Christina Zuniga";
+      
+
             const int pin = 4242;
             const int accountNumber = 123456;
+
+            bool authenticated = false;
+            bool locked = false;
 
             bool repeat = true;
             do
             {
-                Console.Write("Please enter your account number: ");
-                userAccount = int.Parse(Console.ReadLine());
 
-                if (userAccount == accountNumber)
+                do
                 {
-                    Console.WriteLine("Welcome Christina Zuniga");
+                    Console.WriteLine("Enter your Account Number.");
+                    userAccount = int.Parse(Console.ReadLine());
+                    count++;
+                } while ((userAccount != accountNumber) && (count !=3));
+
+                if (count == 3)
+                {
+                    Console.WriteLine("Account not recgonized, please try again");
                 }
+                else
+                {
+                    Console.WriteLine("Account Accepted");
+                }
+
+
+
+                //Console.Write("Please enter your account number: ");
+                //userAccount = int.Parse(Console.ReadLine());
+                //if (userAccount == accountNumber)
+                //{
+                //    Console.WriteLine("Welcome Christina Zuniga");
+                //}
+                //else
+                //{
+                //    Console.WriteLine("Account number not recognized, please try again.");
+                //}
+
 
                 Console.WriteLine("Please enter your Pin Number ");
                 pin1 = int.Parse(Console.ReadLine());

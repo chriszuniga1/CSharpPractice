@@ -52,19 +52,20 @@ namespace CSF1Homework
                         deposit = int.Parse(Console.ReadLine());
                         Console.WriteLine("You have deposited deposited ${0} into you account {1}.", deposit, accountNumber);
 
-                        Console.Write("Would you like to proceed with another transaction? Y/N");
-                        userResponse = int.Parse(Console.ReadLine());
 
                         break;
+
+
 
                     case 2:
                         Console.Write("Enter Withdrawal Amount(Whole numbers only): $");
                         withdrawal = int.Parse(Console.ReadLine());
                         Console.WriteLine($"You have withdrawn ${withdrawal} from your account {accountNumber}.");
 
-                        Console.Write("Would you like to proceed with another transaction? Y/N");
 
                         break;
+
+
 
                     case 3:
                         Console.WriteLine("Thank you for banking with us today.");
