@@ -48,7 +48,7 @@
   <ItemGroup>
     <Compile Include="ATM.cs" />
     <Compile Include="ATMPart2.cs" />
-    <Compile Include="Program.cs" />
+    <Compile Include="HomeWorkInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="WarmupFruitloop2.cs" />
     <Compile Include="WarmupFruitLoop1.cs" />
